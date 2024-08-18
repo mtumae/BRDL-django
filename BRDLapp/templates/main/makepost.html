@@ -1,0 +1,12 @@
+{% extends "base.html" %} 
+{% block title %} Bahati Ridge Post {% endblock %}
+{% block body %}
+<h1>Add a blog Post</h1>
+<div style="color: white;">
+<form method="POST">
+{% csrf_token %}
+{{ form.as_p }}
+<button>Post</button>
+</div>
+
+{% endblock %}

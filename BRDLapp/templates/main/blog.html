@@ -1,0 +1,35 @@
+{% extends "base.html" %} 
+{% block title %} Bahati Ridge Blog {% endblock %}
+{% block body %}
+
+
+<div class="grid-container">
+
+    <div class="grid-items">
+    {% if not user.is_authenticated %}
+    <button style="float: right; margin: 20px;">Sign up</button>
+    {% endif %}
+    {% if user.is_authenticated %}
+    <button style="float: right; margin: 20px;" ><a href={% url 'makepost' %} style="color: #ceaa57; text-decoration: none; font-size: 20px;">Make a post<a></button>
+    {% endif %}
+
+    </div>
+</div>
+
+
+
+<div class="grid-container">
+
+    {%for post in posts%}
+    <div class="grid-item" style="text-align: left;">
+    <h1>{{post.title}}</h1>
+    <hr style="color: #ceaa57; opacity: 0.6;">
+    <p>{{post.intro}}<p>
+    <p>{{post.body}}<p>    
+    <p style="font-size:18px; opacity: 0.4;">{{post.date_added}} | {{post.name}} <p>
+</div>
+{% endfor %}
+</div>
+
+
+{% endblock %}

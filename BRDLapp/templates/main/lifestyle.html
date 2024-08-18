@@ -1,0 +1,102 @@
+{% extends "base.html" %} 
+{% load static %}
+
+
+{% block title %} Bahati Ridge Home {% endblock %}
+
+
+{% block body %}
+<div class="grid-container" style="justify-content: center;">
+    <div class="grid-item">
+        <img id="img1" src={% static 'images/Flyer1.png' %} alt="Flyer displaying Bahati Ridge Sopa Villas and Moringa Bungalows Floor Plans and Prices.">
+        <img id="img2" src={% static 'images/Flyer2.png' %} alt="Flyer displaying Bahati Ridge Sopa Villas and Moringa Bungalows Prices.">
+
+        <div>
+            <a style="font-size: 18px; ">Pages:</a>
+            <button id="1" onclick="change1()">1</button>
+            <button id="2" onclick="change2()">2</button>
+            <button id="3" onclick="change3()">3</button>
+            <button id="4" onclick="change4()">4</button>
+            <a target="_blank" href="images/Phase1flyer.pdf" style="color: gold;">Download Flyer</a>
+        </div>
+  
+        <h2 style="text-align: left;">Sopa Court</h2>
+        <h1 style="text-align: left;">Plots for Sale</h1>
+        <h3 style="text-align: left;">Amenities</h3>
+        <p style="text-align: left;">Cabro Driveways and Parking<br>
+        Curbed Driveways,
+        Parking, Sidewalks and Fire Hydrants<br>
+        Green Chain-link Perimeter Fence<br>
+        Solar Street lighting<br>
+        CCTV Perimeter and Court Security Cameras<br>
+        Main Court Gate Security<br>
+        Children’s Playground<br>
+        Plug & Play Water/Electricity/Sewer & Fibre Access Points on each Plot<br>
+        Separate Construction Gate Access</p>
+    </div>
+
+
+    <div class="grid-item">
+        <img src={% static 'images/Phase2Flyer1.png' %}>
+        <img src={% static 'images/Phase2Flyer2.png' %}>
+        <h1 style="text-align: left;">Phase 2</h1>
+        <h3 style="text-align: left;">Coming soon</h3>
+        <ul style="text-align: left;">
+            <li>Olo Rock Bungalows</li>
+            <li>Serenai Villas</li>
+            <li>Ol Keju Split Level Villas</li>
+            <li>Rahidi Cottages</li>
+            <li>Clubhouse & Wellness Center</li>
+            <li>Swimming Pool</li>
+            <li>Minimart</li>
+            <li>Bahati Ridge Sales/Leasing Office</li>
+        </ul>    
+    </div>
+
+</div>
+<script>
+
+
+    function change1(){
+        document.getElementById("img1").src="{% static 'images/Flyer1.png' %}"
+        document.getElementById("img2").src="{% static 'images/Flyer2.png' %}"
+        document.getElementById("1").style="color: gold;"
+        document.getElementById("2").style="color: white;"
+        document.getElementById("3").style="color: white;"
+        document.getElementById("4").style="color: white;"
+  
+       
+    }
+    function change2(){
+        document.getElementById("img1").src="{% static 'images/Flyer3.png' %}"
+        document.getElementById("img2").src="{% static 'images/Flyer4.png' %}"
+        document.getElementById("2").style="color: gold;"
+        document.getElementById("1").style="color: white;"
+        document.getElementById("3").style="color: white;"
+        document.getElementById("4").style="color: white;"
+        
+    }
+    function change3(){
+        document.getElementById("img1").src="{% static 'images/Flyer5.png' %}"
+        document.getElementById("img2").src="{% static 'images/Flyer6.png' %}"
+        document.getElementById("3").style="color: gold;"
+        document.getElementById("1").style="color: white;"
+        document.getElementById("2").style="color: white;"
+        document.getElementById("4").style="color: white;"
+       
+    }
+    function change4(){
+        document.getElementById("img1").src="{% static 'images/Flyer7.png' %}"
+        document.getElementById("img2").src="{% static 'images/Flyer8.png' %}"
+        document.getElementById("4").style="color: gold;"
+        document.getElementById("1").style="color: white;"
+        document.getElementById("2").style="color: white;"
+        document.getElementById("3").style="color: white;"
+        
+    }
+    
+    </script>
+
+
+
+{% endblock %}

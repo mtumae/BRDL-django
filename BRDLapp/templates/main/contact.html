@@ -1,0 +1,41 @@
+{% extends "base.html" %} 
+
+
+{% block title %} Bahati Ridge Contact {% endblock %}
+
+
+{% block body %}
+<div class="grid-container">
+
+    <div class="grid-item" style="background-color: white; color: #0e200d; text-align: left; padding: 30px;">
+        <h1>Sopa Court  Reservation Form</h1>
+        <hr style="color: 0e200d; margin-bottom: 20px">
+        <div style="background-color: black; width: 20%; float: right;">a</div>
+        <label>Last Name</label><input><br><label>Middle Name</label><input><br><label>First Name</label><input><br>
+        <label>Company name</label><input placeholder="if applicable"><br><label>ID/Passport/Certificate No</label><input placeholder=""><br>
+        <label>Mobile Tel</label><input><br><label>Office Tel</label><input><br>
+        <label>Email</label><input><label>Postal address</label><input><br>
+        <label>Lawyers</label><input><br>
+        <label>Reffered by</label><input><br><br><br>
+        <a href="#">Click here to download form</a>
+        <a href="#" style="margin-left: 20px;">Terms and Conditions</a> 
+     
+        <button style="float: right;">Submit</button>
+    </div>
+
+
+    <div class="grid-item" style="background-color: white; color: #0e200d; text-align: left; padding: 30px;">
+        <h1>Olengai Townhouse Reservation Form<br><a style="color: red; opacity: 0.7;"> Few units remaining<a></h1>
+        <hr style="color: 0e200d; margin-bottom: 20px">
+        <div style="background-color: black; width: 20%; float: right;"></div>
+        {{ form.as_p }}
+        <a href="#">Click here to download form</a>
+        <a href="#" style="margin-left: 20px;">Terms and Conditions</a> 
+     
+        <button style="float: right;">Submit</button>
+    </div>
+
+
+
+</div>
+{% endblock %}

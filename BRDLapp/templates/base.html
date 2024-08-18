@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Bahati Ridge Limited{% endblock %}</title>
+</head>
+<img src={% static 'images/BahatiRidgeLogo.png' %} alt="Bahati Ridge Logo."><br>
+<nav>
+    <button onclick="location.href='home'">Home</button>
+    <button onclick="location.href='legacy'">Legacy</button>
+    <button onclick="location.href='lifestyle'">Lifestyle</button>
+    <button onclick="location.href='location'">Location</button>
+    <button onclick="location.href='contact'">Contact</button>
+    <button onclick="location.href='gallery'">Gallery</button>
+    <button onclick="location.href='blog'">Blog</button>
+</nav>
+{% block body %} 
+<body>
+
+
+</body>
+{% endblock %}
+{% block footer %}
+
+<div class="footer" style="color: white; margin-left: -40px;">
+    <div>
+        <ul style="list-style-type: none;">
+            <li><a style="text-decoration: none; font-size: 30px; color: white; margin: 10px" href="#" class="fa fa-facebook"></a><a style="text-decoration: none; font-size: 30px; color: white; margin: 10px"  href="#" class="fa fa-linkedin"></a><a style="text-decoration: none; font-size: 30px; color: white; margin: 10px"  href="#" class="fa fa-instagram"></a><a style="text-decoration: none; font-size: 30px; color: white; margin: 10px"  href="#" class="fa fa-twitter"></a><a style="text-decoration: none; font-size: 30px; color: white; margin: 10px"  href="#" class="fa fa-youtube"></a></li>
+        </ul>
+    </div>
+    
+    <div>
+        <ul style="list-style-type: none;">
+            <li>info@bahatiridge.co.ke</li>
+            <li>+ 254 (0) 701 338 583</li>
+            <li>3km Off Gitanga Road</li>
+        </ul>
+    </div>
+    
+</div>
+{% endblock %}
+</html>
